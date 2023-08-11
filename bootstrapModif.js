@@ -5,6 +5,8 @@
  SPDX-License-Identifier: Apache-2.0
 */
 "use strict";
+
+console.log("Github version ! ");
 var l,
   ba = function (a) {
     var b = 0;
