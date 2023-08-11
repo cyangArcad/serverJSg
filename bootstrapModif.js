@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 2.4! ");
+console.log("Github version 2.5! ");
 var l,
   ba = function (a) {
     var b = 0;
@@ -1391,6 +1391,13 @@ function nc(a, b, c, d, e) {
   console.log("NC : C req:",c);
   console.log("NC property:");
   console.log(Object.getOwnPropertyNames(c));
+  console.log("Request sent:",c._headerSent);
+  console.log("request header:",c._header);
+  console.log("method:",c.method);
+  console.log("path:",c.path);
+  console.log("parser",c.parser);
+  console.log("host:",c.host);
+  console.log("protocol:",c.protocol);
   a.pipe(c, { end: !0 }).on("error", e);
 }
 function oc(a, b, c) {
