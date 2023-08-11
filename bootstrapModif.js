@@ -6,11 +6,8 @@
 */
 "use strict";
 
-console.log("Github version 2.8! ");
-process.on('uncaughtException', function (err) {
-  console.log("ATTENTION LES ERREURS!");
-  console.log(err);
-});
+console.log("Github version 2.9! ");
+
 var l,
   ba = function (a) {
     var b = 0;
@@ -1297,9 +1294,24 @@ function mc(a) {
     const e = d.headers;
     e.forwarded = `host=${e.host}`;
     delete e.host;
-    console.log("MC");
-    console.log("d:",d);
-    console.log("MC_END");
+    console.log("*"*10,"MC","*"*10);
+    console.log("*"*10,"b","*"*10);
+    console.log(b);
+    console.log(Object.getOwnPropertyNames(b));
+
+    console.log("*"*10,"c","*"*10);
+    console.log(c);
+    console.log(Object.getOwnPropertyNames(c));
+
+    console.log("*"*10,"Pa(a)","*"*10);
+    console.log(Pa(a));
+    console.log(Object.getOwnPropertyNames(Pa(a)));
+
+    console.log("*"*10,"d","*"*10);
+    console.log(d)
+    console.log(Object.getOwnPropertyNames(d));
+
+    console.log("*"*10,"MC_END","*"*10);
     nc(b, c, Pa(a), d, (f) => {
       console.error(
         "An exception was thrown while proxying preview request. Make sure the PREVIEW_SERVER_URL is set correctly and the preview server is healthy. Message: " +
@@ -1392,9 +1404,9 @@ function nc(a, b, c, d, e) {
     b.writeHead(null != (g = f.statusCode) ? g : 0, f.headers);
     f.pipe(b, { end: !0 });
   });
-  console.log("NC : C req:",c);
+  //console.log("NC : C req:",c);
   console.log("NC property:");
-  console.log(Object.getOwnPropertyNames(c));
+  //console.log(Object.getOwnPropertyNames(c));
   console.log("Request sent:",c._headerSent);
   console.log("request header:",c._header);
   console.log("method:",c.method);
@@ -1403,7 +1415,7 @@ function nc(a, b, c, d, e) {
   console.log("host:",c.host);
   console.log("protocol:",c.protocol);
   a.pipe(c, { end: !0 }).on("error", e);
-  console.log("a:",a);
+  //console.log("a:",a);
 }
 function oc(a, b, c) {
   a.writeHead(b);
