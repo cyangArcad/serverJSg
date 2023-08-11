@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 2.9! ");
+console.log("Github version 3.0! ");
 
 var l,
   ba = function (a) {
@@ -1294,24 +1294,25 @@ function mc(a) {
     const e = d.headers;
     e.forwarded = `host=${e.host}`;
     delete e.host;
-    console.log("*"*10,"MC","*"*10);
-    console.log("*"*10,"b","*"*10);
+    const etoileConsole = "******************"
+    console.log(etoileConsole,"MC",etoileConsole);
+    console.log(etoileConsole,"b",etoileConsole);
     console.log(b);
     console.log(Object.getOwnPropertyNames(b));
 
-    console.log("*"*10,"c","*"*10);
+    console.log(etoileConsole,"c",etoileConsole);
     console.log(c);
     console.log(Object.getOwnPropertyNames(c));
 
-    console.log("*"*10,"Pa(a)","*"*10);
+    console.log(etoileConsole,"Pa(a)",etoileConsole);
     console.log(Pa(a));
     console.log(Object.getOwnPropertyNames(Pa(a)));
 
-    console.log("*"*10,"d","*"*10);
+    console.log(etoileConsole,"d",etoileConsole);
     console.log(d)
     console.log(Object.getOwnPropertyNames(d));
 
-    console.log("*"*10,"MC_END","*"*10);
+    console.log(etoileConsole,"MC_END",etoileConsole);
     nc(b, c, Pa(a), d, (f) => {
       console.error(
         "An exception was thrown while proxying preview request. Make sure the PREVIEW_SERVER_URL is set correctly and the preview server is healthy. Message: " +
