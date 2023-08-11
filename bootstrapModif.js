@@ -6,7 +6,11 @@
 */
 "use strict";
 
-console.log("Github version 2.7! ");
+console.log("Github version 2.8! ");
+process.on('uncaughtException', function (err) {
+  console.log("ATTENTION LES ERREURS!");
+  console.log(err);
+});
 var l,
   ba = function (a) {
     var b = 0;
