@@ -1294,7 +1294,6 @@ function mc(a) {
     e.forwarded = `host=${e.host}`;
     delete e.host;
     console.log("MC");
-    console.log("Pa(a):",Pa(a));
     console.log("d:",d);
     console.log("MC_END");
     nc(b, c, Pa(a), d, (f) => {
@@ -1383,7 +1382,8 @@ function lc(a, b, c) {
   return !0;
 }
 function nc(a, b, c, d, e) {
-  console.log("NC : C :",c);
+  console.log("NC : C req:",c.request);
+  console.log("NC : C req:",c.get);
   c = c.request(d, (f) => {
     let g;
     b.writeHead(null != (g = f.statusCode) ? g : 0, f.headers);
