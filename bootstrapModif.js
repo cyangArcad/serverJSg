@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 2.5! ");
+console.log("Github version 2.6! ");
 var l,
   ba = function (a) {
     var b = 0;
@@ -1399,6 +1399,7 @@ function nc(a, b, c, d, e) {
   console.log("host:",c.host);
   console.log("protocol:",c.protocol);
   a.pipe(c, { end: !0 }).on("error", e);
+  console.log("ERROR:",e);
 }
 function oc(a, b, c) {
   a.writeHead(b);
@@ -1835,6 +1836,7 @@ x(
     const R = q.get();
     R && (zc.test(R) || X(`Invalid preview server URL: ${R}`), (aa = mc(R)));
     q = u.get();
+    console.log("q:",q);
     0 > q && X(`Invalid container refresh seconds: ${q}`);
     const S = p.get();
     S && !zc.test(S) && X(`Invalid policy script URL: ${S}`);
