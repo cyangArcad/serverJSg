@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 2.1! ");
+console.log("Github version 2.2! ");
 var l,
   ba = function (a) {
     var b = 0;
@@ -1382,13 +1382,14 @@ function lc(a, b, c) {
   return !0;
 }
 function nc(a, b, c, d, e) {
-  console.log("NC : C req:",c.request);
-  console.log("NC : C req:",c.get);
+  
   c = c.request(d, (f) => {
     let g;
     b.writeHead(null != (g = f.statusCode) ? g : 0, f.headers);
     f.pipe(b, { end: !0 });
   });
+  console.log("NC : C req:",c);
+  console.log("NC type:",typeof c);
   a.pipe(c, { end: !0 }).on("error", e);
 }
 function oc(a, b, c) {
