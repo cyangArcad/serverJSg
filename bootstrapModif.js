@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 2! ");
+console.log("Github version 2.1! ");
 var l,
   ba = function (a) {
     var b = 0;
