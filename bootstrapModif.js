@@ -1293,6 +1293,12 @@ function mc(a) {
     const e = d.headers;
     e.forwarded = `host=${e.host}`;
     delete e.host;
+    console.log("MC");
+    console.log("b:",b);
+    console.log("c:",c);
+    console.log("Pa(a):",Pa(a));
+    console.log("d:",d);
+    console.log("MC_END");
     nc(b, c, Pa(a), d, (f) => {
       console.error(
         "An exception was thrown while proxying preview request. Make sure the PREVIEW_SERVER_URL is set correctly and the preview server is healthy. Message: " +
