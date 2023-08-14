@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 3.1! ");
+console.log("Github version 3.2! ");
 
 var l,
   ba = function (a) {
@@ -1257,7 +1257,7 @@ function ic(a, b, c, d) {
             }),
             f.end(e))
           : (f.writeHead(404, { "Content-Type": "text/plain" }),
-            f.end("Not Found"));
+            f.end("Not Found"," containerId,h:",h.containerId));
       } else
         (null == g ? 0 : g.endsWith("/gtm/exit_preview"))
           ? ((g = vb(e)),
@@ -1266,7 +1266,7 @@ function ic(a, b, c, d) {
                 f.writeHead(200, va),
                 f.end())
               : (f.writeHead(404, { "Content-Type": "text/plain" }),
-                f.end("Not Found")))
+                f.end("Not Found"," containerId:",g.containerId)))
           : (null == g ? 0 : g.endsWith("/gtm/get_memo"))
           ? jc(e, f, a)
           : (null == g ? 0 : g.endsWith("/gtm/post_memo"))
@@ -1283,7 +1283,7 @@ function ic(a, b, c, d) {
               )
             ),
             f.end(")]}'\n" + JSON.stringify(hc(e))))
-          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found",g.containerId));
+          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found"," containerId:",g.containerId));
   };
 }
 function mc(a) {
