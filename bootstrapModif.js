@@ -1257,7 +1257,7 @@ function ic(a, b, c, d) {
             }),
             f.end(e))
           : (f.writeHead(404, { "Content-Type": "text/plain" }),
-            f.end("Not Found"," containerId,h:",h.containerId));
+            f.end("Not Found"," containerId,h:"));
       } else
         (null == g ? 0 : g.endsWith("/gtm/exit_preview"))
           ? ((g = vb(e)),
