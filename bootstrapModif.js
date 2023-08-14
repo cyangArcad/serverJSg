@@ -1266,7 +1266,7 @@ function ic(a, b, c, d) {
                 f.writeHead(200, va),
                 f.end())
               : (f.writeHead(404, { "Content-Type": "text/plain" }),
-                f.end("Not Found"," containerId:",g.containerId)))
+                f.end("Not Found"," containerId:",typeof g.container.Id)))
           : (null == g ? 0 : g.endsWith("/gtm/get_memo"))
           ? jc(e, f, a)
           : (null == g ? 0 : g.endsWith("/gtm/post_memo"))
