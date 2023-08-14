@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 3.3! ");
+console.log("Github version 3.4! ");
 
 var l,
   ba = function (a) {
@@ -1215,6 +1215,7 @@ function hc(a) {
   };
 }
 function ic(a, b, c, d) {
+  console.log("ic:notfound function");
   return (e, f) => {
     if ("OPTIONS" !== e.method || e.headers.origin !== b) var g = !1;
     else
@@ -1283,7 +1284,7 @@ function ic(a, b, c, d) {
               )
             ),
             f.end(")]}'\n" + JSON.stringify(hc(e))))
-          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found"+g.containerId));
+          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found"));
   };
 }
 function mc(a) {
