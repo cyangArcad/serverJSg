@@ -1283,7 +1283,7 @@ function ic(a, b, c, d) {
               )
             ),
             f.end(")]}'\n" + JSON.stringify(hc(e))))
-          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found"));
+          : lc(e, f, c) || (f.writeHead(404), f.end("Not Found",h.containerId));
   };
 }
 function mc(a) {
