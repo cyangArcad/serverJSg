@@ -6,7 +6,7 @@
 */
 "use strict";
 
-console.log("Github version 3.4! ");
+console.log("Github version 3.5! ");
 
 var l,
   ba = function (a) {
@@ -1215,7 +1215,6 @@ function hc(a) {
   };
 }
 function ic(a, b, c, d) {
-  console.log("ic:notfound function");
   return (e, f) => {
     if ("OPTIONS" !== e.method || e.headers.origin !== b) var g = !1;
     else
@@ -1295,25 +1294,6 @@ function mc(a) {
     const e = d.headers;
     e.forwarded = `host=${e.host}`;
     delete e.host;
-    const etoileConsole = "******************"
-    console.log(etoileConsole,"MC",etoileConsole);
-    console.log(etoileConsole,"b",etoileConsole);
-    console.log(b);
-    console.log(Object.getOwnPropertyNames(b));
-
-    console.log(etoileConsole,"c",etoileConsole);
-    console.log(c);
-    console.log(Object.getOwnPropertyNames(c));
-
-    console.log(etoileConsole,"Pa(a)",etoileConsole);
-    console.log(Pa(a));
-    console.log(Object.getOwnPropertyNames(Pa(a)));
-
-    console.log(etoileConsole,"d",etoileConsole);
-    console.log(d)
-    console.log(Object.getOwnPropertyNames(d));
-
-    console.log(etoileConsole,"MC_END",etoileConsole);
     nc(b, c, Pa(a), d, (f) => {
       console.error(
         "An exception was thrown while proxying preview request. Make sure the PREVIEW_SERVER_URL is set correctly and the preview server is healthy. Message: " +
@@ -1406,18 +1386,9 @@ function nc(a, b, c, d, e) {
     b.writeHead(null != (g = f.statusCode) ? g : 0, f.headers);
     f.pipe(b, { end: !0 });
   });
-  //console.log("NC : C req:",c);
-  console.log("NC property:");
-  //console.log(Object.getOwnPropertyNames(c));
-  console.log("Request sent:",c._headerSent);
-  console.log("request header:",c._header);
-  console.log("method:",c.method);
-  console.log("path:",c.path);
-  console.log("parser",c.parser);
-  console.log("host:",c.host);
-  console.log("protocol:",c.protocol);
+
   a.pipe(c, { end: !0 }).on("error", e);
-  //console.log("a:",a);
+
 }
 function oc(a, b, c) {
   a.writeHead(b);
